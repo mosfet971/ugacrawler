@@ -2,7 +2,7 @@
 
 Поисковик по сайту telegra.ph с графическим интерфейсом.
 
-![Uploading Снимок.PNG…]()
+![photo](/photo?raw=true)
 
 
 ## Запуск
