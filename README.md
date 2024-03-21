@@ -4,7 +4,7 @@
 
 ## Запуск
 
-Приложение для windows можно скачать по ссылке: https://github.com/mosfet971/ugacrawler/releases/download/1.0.0/ugacrawler-win32-x64.zip
+Приложение для Windows можно скачать по ссылке: https://github.com/mosfet971/ugacrawler/releases/download/1.0.0/ugacrawler-win32-x64.zip
 
 Также возможен запуск при помощи командной строки:
 
