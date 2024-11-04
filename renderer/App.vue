@@ -12,9 +12,9 @@ const { scanResults, scanTelegraph } = useTelegraphScanner();
 
 //provide("resultsList", scanResults);
 
-async function startScanning(text) {
+async function startScanning(text, isSortNeeded, paramNameForSort, sortDirectionString) {
   state.isLoading = true;
-  await scanTelegraph(text);
+  await scanTelegraph(text, isSortNeeded, paramNameForSort, sortDirectionString);
   state.isLoading = false;
 }
 

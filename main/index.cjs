@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const path = require('path');
 const { scanBatch } = require("./scanBatch.cjs");
+const url = require("url")
 
 if (require('electron-squirrel-startup')) {
   app.quit();
@@ -45,11 +46,16 @@ function createWindow() {
 
   mainWindow.maximize();
 
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.show();
 
-  mainWindow.loadURL(path.join(__dirname, '../dist/index.html'));
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, '../dist/index.html'),
+    protocol: "file:",
+    slashes: true
+  }));
+  //mainWindow.loadURL(path.join(__dirname, '../dist/index.html'));
 
   mainWindow.on('closed', () => {
     mainWindow = null;
